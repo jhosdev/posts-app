@@ -98,6 +98,7 @@ import {onBeforeMount, ref} from 'vue';
 import {FilterMatchMode} from 'primevue/api';
 import {useToast} from 'primevue/usetoast';
 import {PostsApiService} from "@/services/posts-api-services";
+import type {Post} from "@/models/post.model";
 
 let postsService = new PostsApiService();
 
@@ -105,13 +106,6 @@ onBeforeMount(() => {
     getPosts();
     getUserIds();
 });
-
-export interface Post{
-    id:number,
-    title:string,
-    body:string,
-    userId:number,
-}
 
 const toast = useToast();
 const dt = ref();

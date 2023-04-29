@@ -1,15 +1,9 @@
 import axios from "axios"
+import type {Post} from "@/models/post.model";
 
 const http = axios.create({
     baseURL:"https://jsonplaceholder.typicode.com/"
 })
-
-interface Post{
-    id:number,
-    title:string,
-    body:string,
-    userId:number,
-}
 
 type DeleteUserResponse = '';
 export class PostsApiService{
