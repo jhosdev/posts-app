@@ -131,7 +131,7 @@ const getUserIds = () => {
     postsService.getAll().then((response) => {
         //console.log(response)
         response.data.map(p => userIds.value.add(p.userId));
-        console.log(Array.from(userIds.value))
+        //console.log(Array.from(userIds.value))
     });
 };
 
