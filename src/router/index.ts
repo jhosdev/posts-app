@@ -1,24 +1,42 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import notFoundView from "@/views/not-found-view.vue";
-import PostsTableComponent from "@/components/posts-table.component.vue";
-import PostsCommentsTableComponent from "@/components/posts-comments-table.component.vue";
+import HomeComponent from "@/components/home.component.vue";
+import PostsComponent from "@/components/posts.component.vue";
+import UsersComponent from "@/components/users.component.vue";
+import DocumentationComponent from "@/components/documentation.component.vue";
+import SettingsComponent from "@/components/settings.component.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: '/posts',
+      redirect: '/home',
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: HomeComponent
+    },
+    {
+      path: '/users',
+      name: 'users',
+      component: UsersComponent
     },
     {
       path: '/posts',
       name: 'posts',
-      component: PostsTableComponent
+      component: PostsComponent
     },
     {
-      path: '/posts/comments',
-      name: 'posts-comments',
-      component: PostsCommentsTableComponent
+      path: '/documentation',
+      name: 'documentation',
+      component: DocumentationComponent
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: SettingsComponent
     },
     {
       path: '/:pathMatch(.*)*',

@@ -2,9 +2,9 @@
   <p>Developed by: u202115595 - Jhosaim Ricardo Pocohuanca Pineda</p>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-    name: "footer-comp"
+    name: "FooterComponent"
 }
 </script>
 

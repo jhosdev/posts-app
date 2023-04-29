@@ -1,10 +1,11 @@
 <template>
-    <main>
-        <p>Not Found</p>
-    </main>
+    <p>In process</p>
 </template>
 
 <script lang="ts">
+export default {
+    name: "SettingsComponent"
+}
 </script>
 
 <style scoped>

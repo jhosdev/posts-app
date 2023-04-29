@@ -4,27 +4,35 @@ const http = axios.create({
     baseURL:"https://jsonplaceholder.typicode.com/"
 })
 
+interface Post{
+    id:number,
+    title:string,
+    body:string,
+    userId:number,
+}
+
+type DeleteUserResponse = '';
 export class PostsApiService{
     getAll() {
-        return http.get('posts')
+        return http.get<Post[]>('posts')
     }
 
-    getPostById(id:string){
-        return http.get('posts/'+id)
+    getPostById(id:number){
+        return http.get<Post>('posts/'+id)
     };
 
-    getPostComments(id:string){
+    getPostComments(id:number){
         return http.get('posts/'+id+'/comments')
     };
-    createPost(body:any){
-        return http.post('posts',body)
+    createPost(body:Post){
+        return http.post<Post>('posts',body)
     }
 
-    udapte(id:string,body:any){
-        return http.patch('posts/'+id,body)
+    updatePost(id:number,body:Post){
+        return http.patch<Post>('posts/'+id,body)
     }
 
-    delete(id:string){
-        return http.delete("posts/"+id)
+    delete(id:number){
+        return http.delete<DeleteUserResponse>("posts/"+id)
     }
 }

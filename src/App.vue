@@ -1,18 +1,22 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import ToolbarComp from "@/components/toolbar.component.vue";
-import FooterComp from "@/components/footer.component.vue";
+import HeaderComponent from "@/components/header.component.vue";
+import FooterComponent from "@/components/footer.component.vue";
 </script>
 
 <template>
-    <header>
-        <toolbar-comp></toolbar-comp>
-    </header>
-    <main>
-        <RouterView />
-    </main>
+    <div class="card">
+            <header>
+                <header-component></header-component>
+            </header>
+            <main>
+                <RouterView />
+            </main>
+    </div>
+
+
     <footer>
-        <footer-comp></footer-comp>
+        <footer-component></footer-component>
     </footer>
 </template>
 

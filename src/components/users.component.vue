@@ -1,10 +1,10 @@
 <template>
-
+    <p>In process</p>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-    name: "posts-comments-table.component.vue"
+    name: "UsersComponent"
 }
 </script>
 
